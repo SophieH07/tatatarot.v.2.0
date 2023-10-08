@@ -5,10 +5,13 @@ const Cards = () => {
   return (
     <div>
       {cards.map((card) => (
-        <div key={card.name} className="inline-flex p-2">
+        <div
+          key={card.name}
+          className="inline-flex p-2 text-center uppercase font-medium"
+        >
           <div>
             <p>{card.name}</p>
-            <img width="100px" src={card.picture} />
+            <img width="250px" src={card.picture} />
           </div>
         </div>
       ))}
