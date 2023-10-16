@@ -1,20 +1,26 @@
 import { useState } from "react";
 import cardList from "../components/cardList";
+import { useEffect } from "react";
 
 const Generator = () => {
-  const [randomCards, setRandomCards] = useState(cardList);
-  const [picked, setPicked] = useState(false);
-  function getRandomCards(number) {
-    const shuffledCards = [...randomCards].sort(() => 0.5 - Math.random());
-    const selected = shuffledCards.slice(0, number);
+  const [randomCards, setRandomCards] = useState([]);
+  let number = 0;
+
+  useEffect(() => {
+    getRandomCards(number);
+  }, [number]);
+
+  function getRandomCards(value) {
+    number = value;
+    const shuffledCards = [...cardList].sort(() => 0.5 - Math.random());
+    const selected = shuffledCards.slice(0, value);
     setRandomCards(selected);
-    setPicked(true);
   }
 
   return (
     <div className="flex justify-center items-center">
       <div className="justify-center items-center text-center">
-        <div className="inline-flex items-center">
+        <div className="inline-flex items-center pb-4">
           <select
             name="number-cards"
             id="number-cards"
@@ -37,22 +43,18 @@ const Generator = () => {
               Twelve
             </option>
           </select>
-          <div className="pl-2">
-            <button
-              className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded"
-              onClick={getRandomCards}
-            >
-              Pick Random Cards
-            </button>
-          </div>
         </div>
         <div>
-          {picked &&
-            randomCards.map((c) => (
-              <div key={c.name}>
-                <p>{c.name}</p> <img className="max-w-[14em]" src={c.picture} />
+          {randomCards.map((card) => (
+            <div key={card.name} className="inline-flex animate-jump-in">
+              <div className="relative inline-flex justify-center text-center uppercase font-bold m-4 transition duration-300 ease-in-out hover:scale-110">
+                <img src={card.picture} className="max-w-[14em]" />
+                <span className="cursor-default absolute inset-0 pt-36 transition-all transform opacity-0 hover:bg-white hover:bg-opacity-70 hover:opacity-100 text-3xl text-black">
+                  {card.name}
+                </span>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>
