@@ -2,8 +2,8 @@ import Logo from "../assets/tarotlogotrans.png";
 
 const Home = () => {
   return (
-    <div className=" text-center lg:text-5xl md:text-4xl sm:text-xl xl:text-6xl uppercase font-bold">
-      <p className="animate-fade-right pt-4">
+    <div className=" text-center">
+      <p className="animate-fade-right lg:text-5xl md:text-4xl sm:text-xl xl:text-6xl uppercase font-bold pt-4">
         Welcome on Tatatarot! Pick a tarot card!
       </p>
       <div className="flex justify-center items-center pt-9">
@@ -12,6 +12,26 @@ const Home = () => {
           src={Logo}
         />
       </div>
+      <p className="animate-fade-right pt-8">
+        Logo designed with{" "}
+        <a className="hover:text-cyan-600" href="https://www.canva.com/">
+          Canva
+        </a>
+        , card pictures created with{" "}
+        <a className="hover:text-cyan-600" href="https://app.leonardo.ai/">
+          Leonardo.ai
+        </a>
+      </p>
+      <p>Website made with Vite & React & Tailwind CSS</p>
+      <p>
+        Created by{" "}
+        <a
+          className="hover:text-cyan-600"
+          href="https://zsofiaportfolio.netlify.app/"
+        >
+          Zsófia
+        </a>{" "}
+      </p>
     </div>
   );
 };
