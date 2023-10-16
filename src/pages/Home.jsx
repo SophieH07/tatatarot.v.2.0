@@ -22,7 +22,9 @@ const Home = () => {
           Leonardo.ai
         </a>
       </p>
-      <p>Website made with Vite & React & Tailwind CSS</p>
+      <p className="animate-fade-right">
+        Website made with Vite & React & Tailwind CSS
+      </p>
       <p className="animate-fade-right">
         Created by{" "}
         <a
