@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="pt-16">
+      <div className="pt-12">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="generator" element={<Generator />} />

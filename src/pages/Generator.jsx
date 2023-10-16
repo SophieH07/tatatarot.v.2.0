@@ -18,13 +18,13 @@ const Generator = () => {
   }
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="justify-center items-center text-center">
-        <div className="inline-flex items-center pb-4">
+    <div>
+      <div className="lg:flex md:flex">
+        <div className="lg:flex lg:h-screen lg:items-center md:flex md:h-screen md:items-center xl:flex xl:h-screen xl:items-center">
           <select
             name="number-cards"
             id="number-cards"
-            className="p-2 bg-none bg-black rounded bg-opacity-10 text-lg"
+            className="p-2 bg-black rounded bg-opacity-10 lg:text-lg md:text-base sm:text-sm border border-white m-4"
             onChange={(e) => getRandomCards(e.target.value)}
           >
             <option className="bg-slate-800" value="0">
@@ -46,10 +46,16 @@ const Generator = () => {
         </div>
         <div>
           {randomCards.map((card) => (
-            <div key={card.name} className="inline-flex animate-jump-in">
-              <div className="relative inline-flex justify-center text-center uppercase font-bold m-4 transition duration-300 ease-in-out hover:scale-110">
-                <img src={card.picture} className="max-w-[14em]" />
-                <span className="cursor-default absolute inset-0 pt-36 transition-all transform opacity-0 hover:bg-white hover:bg-opacity-70 hover:opacity-100 text-3xl text-black">
+            <div
+              key={card.name}
+              className="inline-flex justify-center items-center animate-jump-in"
+            >
+              <div className="relative inline-flex justify-center text-center uppercase font-bold m-6 transition duration-300 ease-in-out hover:scale-110">
+                <img
+                  src={card.picture}
+                  className="lg:max-w-[16em] max-w-[10em]"
+                />
+                <span className="cursor-default absolute inset-0 pt-20 lg:pt-28 sm:pt-16 md:pt-10 transition-all transform opacity-0 hover:bg-white hover:bg-opacity-70 hover:opacity-100 text-3xl sm:text-xl md:text-xl text-black">
                   {card.name}
                 </span>
               </div>
