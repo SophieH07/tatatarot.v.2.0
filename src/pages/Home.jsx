@@ -23,14 +23,14 @@ const Home = () => {
         </a>
       </p>
       <p>Website made with Vite & React & Tailwind CSS</p>
-      <p>
-        Created by{" "}
+      <p className="animate-fade-right">
+        Created by
         <a
           className="hover:text-cyan-600"
           href="https://zsofiaportfolio.netlify.app/"
         >
           Zsófia
-        </a>{" "}
+        </a>
       </p>
     </div>
   );
