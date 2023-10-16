@@ -1,8 +1,10 @@
-# React + Vite
+<p>My second tarot card generator, using AI generated images and with the option to choose more cards at once.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>Hope you like it!</p>
 
-Currently, two official plugins are available:
+<a href="https://tatatarot.netlify.app/">Tatatarot website! Try it out!</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>Preview:</p>
+<p>
+    <img src="/public/tatatarot.v.2.png" />
+</p>
