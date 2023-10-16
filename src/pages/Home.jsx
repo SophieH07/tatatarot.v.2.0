@@ -24,7 +24,7 @@ const Home = () => {
       </p>
       <p>Website made with Vite & React & Tailwind CSS</p>
       <p className="animate-fade-right">
-        Created by
+        Created by{" "}
         <a
           className="hover:text-cyan-600"
           href="https://zsofiaportfolio.netlify.app/"
