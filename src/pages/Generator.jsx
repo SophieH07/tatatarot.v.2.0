@@ -19,8 +19,8 @@ const Generator = () => {
 
   return (
     <div>
-      <div className="lg:flex md:flex">
-        <div className="lg:flex lg:h-screen lg:items-center md:flex md:h-screen md:items-center xl:flex xl:h-screen xl:items-center">
+      <div>
+        <div className="w-screen text-center pb-10">
           <select
             name="number-cards"
             id="number-cards"
@@ -44,7 +44,7 @@ const Generator = () => {
             </option>
           </select>
         </div>
-        <div>
+        <div className="w-screen text-center">
           {randomCards.map((card) => (
             <div
               key={card.name}
