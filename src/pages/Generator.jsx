@@ -44,7 +44,7 @@ const Generator = () => {
             </option>
           </select>
         </div>
-        <div className="w-screen text-center">
+        <div className="w-[90%] text-center">
           {randomCards.map((card) => (
             <div
               key={card.name}
